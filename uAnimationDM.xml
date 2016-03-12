@@ -1,0 +1,1192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="uAnimationDM">
+  <const name="NONE" type="TAnimationsEnum">
+    <value>
+      NONE
+    </value>
+  </const>
+  <const name="LAMP" type="TAnimationsEnum">
+    <value>
+      LAMP
+    </value>
+  </const>
+  <const name="DISPLAY" type="TAnimationsEnum">
+    <value>
+      DISPLAY
+    </value>
+  </const>
+  <const name="LEVEL" type="TAnimationsEnum">
+    <value>
+      LEVEL
+    </value>
+  </const>
+  <const name="LAMP_OFF" type="TAimationLampStateEnum">
+    <value>
+      LAMP_OFF
+    </value>
+  </const>
+  <const name="LAMP_ON" type="TAimationLampStateEnum">
+    <value>
+      LAMP_ON
+    </value>
+  </const>
+  <const name="d_0" type="TAnimationDisplayStateEnum">
+    <value>
+      d_0
+    </value>
+  </const>
+  <const name="d_1" type="TAnimationDisplayStateEnum">
+    <value>
+      d_1
+    </value>
+  </const>
+  <const name="d_2" type="TAnimationDisplayStateEnum">
+    <value>
+      d_2
+    </value>
+  </const>
+  <const name="d_3" type="TAnimationDisplayStateEnum">
+    <value>
+      d_3
+    </value>
+  </const>
+  <const name="d_4" type="TAnimationDisplayStateEnum">
+    <value>
+      d_4
+    </value>
+  </const>
+  <const name="d_5" type="TAnimationDisplayStateEnum">
+    <value>
+      d_5
+    </value>
+  </const>
+  <const name="d_6" type="TAnimationDisplayStateEnum">
+    <value>
+      d_6
+    </value>
+  </const>
+  <const name="d_7" type="TAnimationDisplayStateEnum">
+    <value>
+      d_7
+    </value>
+  </const>
+  <const name="d_8" type="TAnimationDisplayStateEnum">
+    <value>
+      d_8
+    </value>
+  </const>
+  <enum name="TAnimationsEnum">
+    <element name="NONE" />
+    <element name="LAMP" />
+    <element name="DISPLAY" />
+    <element name="LEVEL" />
+  </enum>
+  <enum name="TAimationLampStateEnum">
+    <element name="LAMP_OFF" />
+    <element name="LAMP_ON" />
+  </enum>
+  <enum name="TAnimationDisplayStateEnum">
+    <element name="d_0" />
+    <element name="d_1" />
+    <element name="d_2" />
+    <element name="d_3" />
+    <element name="d_4" />
+    <element name="d_5" />
+    <element name="d_6" />
+    <element name="d_7" />
+    <element name="d_8" />
+  </enum>
+  <class name="TAnimation">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+    </ancestor>
+    <members>
+      <field name="FImageListLamp" type="TList&lt;ExtCtrls.TImage&gt;" visibility="private" />
+      <field name="FImageListDisplay" type="TList&lt;ExtCtrls.TImage&gt;" visibility="private" />
+      <field name="FLinkedImage" type="TImage" visibility="private" />
+      <field name="FAnimationsType" type="TAnimationsEnum" visibility="private" />
+      <field name="FDisplayState" type="TAnimationDisplayStateEnum" visibility="private" />
+      <field name="FLampState" type="TAimationLampStateEnum" visibility="private" />
+      <constructor name="Create" visibility="public">
+        <parameters>
+          <parameter name="LinkedImage" type="TImage" />
+          <parameter name="FileNameList" type="TList&lt;System.string&gt;" />
+          <parameter name="AE" type="TAnimationsEnum" />
+        </parameters>
+      </constructor>
+      <procedure name="LoadImages" visibility="public">
+        <parameters>
+          <parameter name="FileNameList" type="TList&lt;System.string&gt;" />
+        </parameters>
+      </procedure>
+      <procedure name="OnLamp" visibility="public">
+      </procedure>
+      <procedure name="StateToDefault" visibility="public">
+      </procedure>
+      <procedure name="DisplayChange" visibility="public">
+        <parameters>
+          <parameter name="DS" type="TAnimationDisplayStateEnum" />
+        </parameters>
+      </procedure>
+    </members>
+  </class>
+  <class name="TEnumerator&lt;ExtCtrls.TImage&gt;">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+    </ancestor>
+    <members>
+      <function name="DoGetCurrent" visibility="protected" procflags="abstract virtual">
+        <parameters>
+          <retval type="TImage" />
+        </parameters>
+      </function>
+      <function name="DoMoveNext" visibility="protected" procflags="abstract virtual">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <property name="Current" visibility="public" read="DoGetCurrent" type="TImage">
+      </property>
+      <function name="MoveNext" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+    </members>
+  </class>
+  <class name="TEnumerable&lt;ExtCtrls.TImage&gt;">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+    </ancestor>
+    <members>
+      <function name="DoGetEnumerator" visibility="protected" procflags="abstract virtual">
+        <parameters>
+          <retval type="TEnumerator&lt;ExtCtrls.TImage&gt;" />
+        </parameters>
+      </function>
+      <function name="GetEnumerator" visibility="public">
+        <parameters>
+          <retval type="TEnumerator&lt;ExtCtrls.TImage&gt;" />
+        </parameters>
+      </function>
+    </members>
+  </class>
+  <interface name="IComparer&lt;ExtCtrls.TImage&gt;" ancestor="IInterface">
+    <function name="Compare" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Left" type="TImage" paramflags="const" />
+        <parameter name="Right" type="TImage" paramflags="const" />
+        <retval type="Integer" />
+      </parameters>
+    </function>
+  </interface>
+  <interface name="IEnumerator&lt;ExtCtrls.TImage&gt;" ancestor="IEnumerator">
+    <function name="GetCurrent" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="TImage" />
+      </parameters>
+    </function>
+    <property name="Current" visibility="public" read="GetCurrent" type="TImage">
+    </property>
+  </interface>
+  <interface name="IEnumerable&lt;ExtCtrls.TImage&gt;" ancestor="IEnumerable">
+    <function name="GetEnumerator" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="IEnumerator&lt;ExtCtrls.TImage&gt;" />
+      </parameters>
+    </function>
+  </interface>
+  <class name="TList&lt;ExtCtrls.TImage&gt;">
+    <ancestor name="TEnumerable&lt;ExtCtrls.TImage&gt;" namespace="uAnimationDM">
+      <methodref name="DoGetEnumerator" visibility="protected" procflags="abstract virtual">
+      </methodref>
+      <methodref name="GetEnumerator" visibility="public">
+      </methodref>
+      <ancestor name="TObject" namespace="System">
+        <methodref name="Create" visibility="public" procflags="constructor">
+        </methodref>
+        <methodref name="Free" visibility="public">
+        </methodref>
+        <methodref name="InitInstance" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="CleanupInstance" visibility="public">
+        </methodref>
+        <methodref name="ClassType" visibility="public">
+        </methodref>
+        <methodref name="ClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassNameIs" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassParent" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassInfo" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="InstanceSize" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="InheritsFrom" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="GetInterface" visibility="public">
+        </methodref>
+        <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="Equals" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetHashCode" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="ToString" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="SafeCallException" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Dispatch" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class virtual">
+        </methodref>
+        <methodref name="FreeInstance" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+        </methodref>
+      </ancestor>
+    </ancestor>
+    <members>
+      <field name="FItems" type=":2" visibility="private">
+      </field>
+      <field name="FCount" type="Integer" visibility="private">
+      </field>
+      <field name="FComparer" type="IComparer&lt;ExtCtrls.TImage&gt;" visibility="private">
+      </field>
+      <field name="FOnNotify" type="TCollectionNotifyEvent&lt;ExtCtrls.TImage&gt;" visibility="private">
+      </field>
+      <function name="GetCapacity" visibility="private">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="SetCapacity" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="SetCount" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Integer" />
+        </parameters>
+      </procedure>
+      <function name="GetItem" visibility="private">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <retval type="TImage" />
+        </parameters>
+      </function>
+      <procedure name="SetItem" visibility="private">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Value" type="TImage" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="Grow" visibility="private">
+        <parameters>
+          <parameter name="ACount" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="GrowCheck" visibility="private">
+        <parameters>
+          <parameter name="ACount" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDelete" visibility="private">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Notification" type="TCollectionNotification" />
+        </parameters>
+      </procedure>
+      <function name="DoGetEnumerator" visibility="protected" procflags="override">
+        <parameters>
+          <retval type="TEnumerator&lt;ExtCtrls.TImage&gt;" />
+        </parameters>
+      </function>
+      <procedure name="Notify" visibility="protected" procflags="virtual">
+        <parameters>
+          <parameter name="Item" type="TImage" paramflags="const" />
+          <parameter name="Action" type="TCollectionNotification" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public">
+        <parameters>
+        </parameters>
+      </constructor>
+      <constructor name="Create" visibility="public">
+        <parameters>
+          <parameter name="AComparer" type="IComparer&lt;ExtCtrls.TImage&gt;" paramflags="const" />
+        </parameters>
+      </constructor>
+      <constructor name="Create" visibility="public">
+        <parameters>
+          <parameter name="Collection" type="TEnumerable&lt;ExtCtrls.TImage&gt;" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="Add" visibility="public">
+        <parameters>
+          <parameter name="Value" type="TImage" paramflags="const" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="AddRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Values" paramflags="const">
+            <array name="Values">
+              <element type="TImage" />
+            </array>
+          </parameter>
+        </parameters>
+      </procedure>
+      <procedure name="AddRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Collection" type="IEnumerable&lt;ExtCtrls.TImage&gt;" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="AddRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Collection" type="TEnumerable&lt;ExtCtrls.TImage&gt;" />
+        </parameters>
+      </procedure>
+      <procedure name="Insert" visibility="public">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Value" type="TImage" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="InsertRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Values" paramflags="const">
+            <array name="Values">
+              <element type="TImage" />
+            </array>
+          </parameter>
+        </parameters>
+      </procedure>
+      <procedure name="InsertRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Collection" type="IEnumerable&lt;ExtCtrls.TImage&gt;" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="InsertRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Collection" type="TEnumerable&lt;ExtCtrls.TImage&gt;" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="Remove" visibility="public">
+        <parameters>
+          <parameter name="Value" type="TImage" paramflags="const" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="Delete" visibility="public">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DeleteRange" visibility="public">
+        <parameters>
+          <parameter name="AIndex" type="Integer" />
+          <parameter name="ACount" type="Integer" />
+        </parameters>
+      </procedure>
+      <function name="Extract" visibility="public">
+        <parameters>
+          <parameter name="Value" type="TImage" paramflags="const" />
+          <retval type="TImage" />
+        </parameters>
+      </function>
+      <procedure name="Exchange" visibility="public">
+        <parameters>
+          <parameter name="Index1" type="Integer" />
+          <parameter name="Index2" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="Move" visibility="public">
+        <parameters>
+          <parameter name="CurIndex" type="Integer" />
+          <parameter name="NewIndex" type="Integer" />
+        </parameters>
+      </procedure>
+      <function name="First" visibility="public">
+        <parameters>
+          <retval type="TImage" />
+        </parameters>
+      </function>
+      <function name="Last" visibility="public">
+        <parameters>
+          <retval type="TImage" />
+        </parameters>
+      </function>
+      <procedure name="Clear" visibility="public">
+      </procedure>
+      <function name="Contains" visibility="public">
+        <parameters>
+          <parameter name="Value" type="TImage" paramflags="const" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="IndexOf" visibility="public">
+        <parameters>
+          <parameter name="Value" type="TImage" paramflags="const" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="LastIndexOf" visibility="public">
+        <parameters>
+          <parameter name="Value" type="TImage" paramflags="const" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="Reverse" visibility="public">
+      </procedure>
+      <procedure name="Sort" visibility="public" procflags="overload">
+      </procedure>
+      <procedure name="Sort" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="AComparer" type="IComparer&lt;ExtCtrls.TImage&gt;" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="BinarySearch" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Item" type="TImage" paramflags="const" />
+          <parameter name="Index" type="Integer" paramflags="out" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="BinarySearch" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Item" type="TImage" paramflags="const" />
+          <parameter name="Index" type="Integer" paramflags="out" />
+          <parameter name="AComparer" type="IComparer&lt;ExtCtrls.TImage&gt;" paramflags="const" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="TrimExcess" visibility="public">
+      </procedure>
+      <property name="Capacity" visibility="public" read="TList&lt;ExtCtrls.TImage&gt;.GetCapacity" write="TList&lt;ExtCtrls.TImage&gt;.SetCapacity" type="Integer">
+      </property>
+      <property name="Count" visibility="public" read="FCount" write="TList&lt;ExtCtrls.TImage&gt;.SetCount" type="Integer">
+      </property>
+      <property name="Items" visibility="public" read="TList&lt;ExtCtrls.TImage&gt;.GetItem" write="TList&lt;ExtCtrls.TImage&gt;.SetItem" type="TImage">
+      </property>
+      <event name="OnNotify" visibility="public" read="FOnNotify" write="FOnNotify" type="TCollectionNotifyEvent&lt;ExtCtrls.TImage&gt;">
+      </event>
+      <function name="GetEnumerator" visibility="public">
+        <parameters>
+          <retval type="TList&lt;ExtCtrls.TImage&gt;.TEnumerator" />
+        </parameters>
+      </function>
+    </members>
+  </class>
+  <class name="TEnumerator&lt;System.string&gt;">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+    </ancestor>
+    <members>
+      <function name="DoGetCurrent" visibility="protected" procflags="abstract virtual">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="DoMoveNext" visibility="protected" procflags="abstract virtual">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <property name="Current" visibility="public" read="DoGetCurrent" type="string">
+      </property>
+      <function name="MoveNext" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+    </members>
+  </class>
+  <class name="TEnumerable&lt;System.string&gt;">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+    </ancestor>
+    <members>
+      <function name="DoGetEnumerator" visibility="protected" procflags="abstract virtual">
+        <parameters>
+          <retval type="TEnumerator&lt;System.string&gt;" />
+        </parameters>
+      </function>
+      <function name="GetEnumerator" visibility="public">
+        <parameters>
+          <retval type="TEnumerator&lt;System.string&gt;" />
+        </parameters>
+      </function>
+    </members>
+  </class>
+  <interface name="IComparer&lt;System.string&gt;" ancestor="IInterface">
+    <function name="Compare" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Left" type="string" paramflags="const" />
+        <parameter name="Right" type="string" paramflags="const" />
+        <retval type="Integer" />
+      </parameters>
+    </function>
+  </interface>
+  <interface name="IEnumerator&lt;System.string&gt;" ancestor="IEnumerator">
+    <function name="GetCurrent" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <property name="Current" visibility="public" read="GetCurrent" type="string">
+    </property>
+  </interface>
+  <interface name="IEnumerable&lt;System.string&gt;" ancestor="IEnumerable">
+    <function name="GetEnumerator" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="IEnumerator&lt;System.string&gt;" />
+      </parameters>
+    </function>
+  </interface>
+  <class name="TList&lt;System.string&gt;">
+    <ancestor name="TEnumerable&lt;System.string&gt;" namespace="uAnimationDM">
+      <methodref name="DoGetEnumerator" visibility="protected" procflags="abstract virtual">
+      </methodref>
+      <methodref name="GetEnumerator" visibility="public">
+      </methodref>
+      <ancestor name="TObject" namespace="System">
+        <methodref name="Create" visibility="public" procflags="constructor">
+        </methodref>
+        <methodref name="Free" visibility="public">
+        </methodref>
+        <methodref name="InitInstance" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="CleanupInstance" visibility="public">
+        </methodref>
+        <methodref name="ClassType" visibility="public">
+        </methodref>
+        <methodref name="ClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassNameIs" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassParent" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassInfo" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="InstanceSize" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="InheritsFrom" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="GetInterface" visibility="public">
+        </methodref>
+        <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="Equals" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetHashCode" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="ToString" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="SafeCallException" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Dispatch" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class virtual">
+        </methodref>
+        <methodref name="FreeInstance" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+        </methodref>
+      </ancestor>
+    </ancestor>
+    <members>
+      <field name="FItems" type=":3" visibility="private">
+      </field>
+      <field name="FCount" type="Integer" visibility="private">
+      </field>
+      <field name="FComparer" type="IComparer&lt;System.string&gt;" visibility="private">
+      </field>
+      <field name="FOnNotify" type="TCollectionNotifyEvent&lt;System.string&gt;" visibility="private">
+      </field>
+      <function name="GetCapacity" visibility="private">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="SetCapacity" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="SetCount" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Integer" />
+        </parameters>
+      </procedure>
+      <function name="GetItem" visibility="private">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="SetItem" visibility="private">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="Grow" visibility="private">
+        <parameters>
+          <parameter name="ACount" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="GrowCheck" visibility="private">
+        <parameters>
+          <parameter name="ACount" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDelete" visibility="private">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Notification" type="TCollectionNotification" />
+        </parameters>
+      </procedure>
+      <function name="DoGetEnumerator" visibility="protected" procflags="override">
+        <parameters>
+          <retval type="TEnumerator&lt;System.string&gt;" />
+        </parameters>
+      </function>
+      <procedure name="Notify" visibility="protected" procflags="virtual">
+        <parameters>
+          <parameter name="Item" type="string" paramflags="const" />
+          <parameter name="Action" type="TCollectionNotification" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public">
+        <parameters>
+        </parameters>
+      </constructor>
+      <constructor name="Create" visibility="public">
+        <parameters>
+          <parameter name="AComparer" type="IComparer&lt;System.string&gt;" paramflags="const" />
+        </parameters>
+      </constructor>
+      <constructor name="Create" visibility="public">
+        <parameters>
+          <parameter name="Collection" type="TEnumerable&lt;System.string&gt;" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="Add" visibility="public">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="AddRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Values" paramflags="const">
+            <array name="Values">
+              <element type="string" />
+            </array>
+          </parameter>
+        </parameters>
+      </procedure>
+      <procedure name="AddRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Collection" type="IEnumerable&lt;System.string&gt;" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="AddRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Collection" type="TEnumerable&lt;System.string&gt;" />
+        </parameters>
+      </procedure>
+      <procedure name="Insert" visibility="public">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="InsertRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Values" paramflags="const">
+            <array name="Values">
+              <element type="string" />
+            </array>
+          </parameter>
+        </parameters>
+      </procedure>
+      <procedure name="InsertRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Collection" type="IEnumerable&lt;System.string&gt;" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="InsertRange" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <parameter name="Collection" type="TEnumerable&lt;System.string&gt;" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="Remove" visibility="public">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="Delete" visibility="public">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DeleteRange" visibility="public">
+        <parameters>
+          <parameter name="AIndex" type="Integer" />
+          <parameter name="ACount" type="Integer" />
+        </parameters>
+      </procedure>
+      <function name="Extract" visibility="public">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="Exchange" visibility="public">
+        <parameters>
+          <parameter name="Index1" type="Integer" />
+          <parameter name="Index2" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="Move" visibility="public">
+        <parameters>
+          <parameter name="CurIndex" type="Integer" />
+          <parameter name="NewIndex" type="Integer" />
+        </parameters>
+      </procedure>
+      <function name="First" visibility="public">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="Last" visibility="public">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="Clear" visibility="public">
+      </procedure>
+      <function name="Contains" visibility="public">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="IndexOf" visibility="public">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="LastIndexOf" visibility="public">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="Reverse" visibility="public">
+      </procedure>
+      <procedure name="Sort" visibility="public" procflags="overload">
+      </procedure>
+      <procedure name="Sort" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="AComparer" type="IComparer&lt;System.string&gt;" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="BinarySearch" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Item" type="string" paramflags="const" />
+          <parameter name="Index" type="Integer" paramflags="out" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="BinarySearch" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Item" type="string" paramflags="const" />
+          <parameter name="Index" type="Integer" paramflags="out" />
+          <parameter name="AComparer" type="IComparer&lt;System.string&gt;" paramflags="const" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="TrimExcess" visibility="public">
+      </procedure>
+      <property name="Capacity" visibility="public" read="TList&lt;System.string&gt;.GetCapacity" write="TList&lt;System.string&gt;.SetCapacity" type="Integer">
+      </property>
+      <property name="Count" visibility="public" read="FCount" write="TList&lt;System.string&gt;.SetCount" type="Integer">
+      </property>
+      <property name="Items" visibility="public" read="TList&lt;System.string&gt;.GetItem" write="TList&lt;System.string&gt;.SetItem" type="string">
+      </property>
+      <event name="OnNotify" visibility="public" read="FOnNotify" write="FOnNotify" type="TCollectionNotifyEvent&lt;System.string&gt;">
+      </event>
+      <function name="GetEnumerator" visibility="public">
+        <parameters>
+          <retval type="TList&lt;System.string&gt;.TEnumerator" />
+        </parameters>
+      </function>
+    </members>
+  </class>
+</namespace>

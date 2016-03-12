@@ -1,0 +1,39 @@
+Б17-1:
+FStationR415.PhoneButton = true/false; //МТГ
+FStationR415.ControlLevelSwitch = TControlLevelSwitchEnum; //IТлф-IIТлф. контр уровня дб
+FStationR415.PVUSwitch = TPVUEnum; //ПВУ
+FStationR415.DownUpSecondSwitch = TDownUpEnum; //вызов, опер
+FStationR415.DownUpThirdSwitch = TDownUpEnum; //вызов сл.
+FStationR415.PhoneFirstSwitch := TPhoneFirstEnum; //Iтлф
+FStationR415.CallFirstSwitch := TCallEnum;//канал. раб. соед лин
+FStationR415.Level1Switch := TIndicationEnum; //рег уровня
+FStationR415.PhoneSecondSwitch := TPhoneFirstEnum; //IIтлф
+FStationR415.CallSecondSwitch := TCallEnum;//канал. раб. соед лин
+FStationR415.Level2Switch := TIndicationEnum; //рег уровня
+	под Iтлф преобладание:
+FStationR415.EnabledBroadcastFirstSwitch := TEnabledDisabledEnum;// вкл.пер(под Iтлф преобладание)
+FStationR415.DownUpThirdSwitch := TDownUpEnum; //ТЧК
+FStationR415.DownUpFifthSwitch := TDownUpEnum; //контр
+	под IIтлф преобладание:
+FStationR415.EnabledBroadcastSecondSwitch := TEnabledDisabledEnum; //вкл.пер
+FStationR415.DownUp6Switch := TDownUpEnum; //ТЧК
+FStationR415.DownUp7Switch := TDownUpEnum; //контр
+1Б03:
+FStationR415.Antena := TEnabledDisabledEnum; //антенна
+Б02:
+FStationR415.BroadcastFirstSwitch := TReceptionBroadcastEnum; //передача1
+FStationR415.BroadcastSecondSwitch := TReceptionBroadcastEnum//передача2
+FStationR415.BroadcastThirdSwitch := TReceptionBroadcastEnum; //передача3
+FStationR415.ReceptionFirstSwitch := TReceptionBroadcastEnum; //прием1
+FStationR415.ReceptionSecondSwitch := TReceptionBroadcastEnum; //прием2
+FStationR415.ReceptionThirdSwitch := TReceptionBroadcastEnum; //прием3
+FStationR415.DownUp8Switch := TDownUpEnum; //настройка
+Б01-1:
+FStationR415.ControlReceptionBroadcastSwitch := TControlReceptionBroadcastEnum; //работа, прм, прд, контр
+FStationR415.DownUp9Switch := TDownUpEnum; //Прд.ВКЛ.
+FStationR415.DoubleReception := TEnabledDisabledEnum; //канал ДУ
+FStationR415.PowerLowNormal := TEnabledDisabledEnum; //мощн
+FStationR415.IndicationSwitch := TIndicationEnum;  //индикация
+СЕть:
+FStationR415.PowerSupplyFirstSwitch := TEnabledDisabledEnum; //220 переменка
+FStationR415.PowerSupplySecondSwitch := TEnabledDisabledEnum; //27В постоянка
