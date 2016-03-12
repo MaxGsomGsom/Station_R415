@@ -1,0 +1,839 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="uStationR415DM">
+  <const name="None" type="TWorkType">
+    <value>
+      None
+    </value>
+  </const>
+  <const name="Education" type="TWorkType">
+    <value>
+      Education
+    </value>
+  </const>
+  <const name="Phone_1_35" type="TControlLevelSwitchEnum">
+    <value>
+      Phone_1_35
+    </value>
+  </const>
+  <const name="Phone_1_20" type="TControlLevelSwitchEnum">
+    <value>
+      Phone_1_20
+    </value>
+  </const>
+  <const name="Phone_1_Reception" type="TControlLevelSwitchEnum">
+    <value>
+      Phone_1_Reception
+    </value>
+  </const>
+  <const name="Phone_1_Broadcast" type="TControlLevelSwitchEnum">
+    <value>
+      Phone_1_Broadcast
+    </value>
+  </const>
+  <const name="Control_Level_Off" type="TControlLevelSwitchEnum">
+    <value>
+      Control_Level_Off
+    </value>
+  </const>
+  <const name="Phone_2_Broadcast" type="TControlLevelSwitchEnum">
+    <value>
+      Phone_2_Broadcast
+    </value>
+  </const>
+  <const name="Phone_2_Reception" type="TControlLevelSwitchEnum">
+    <value>
+      Phone_2_Reception
+    </value>
+  </const>
+  <const name="Phone_2_20" type="TControlLevelSwitchEnum">
+    <value>
+      Phone_2_20
+    </value>
+  </const>
+  <const name="Phone_2_35" type="TControlLevelSwitchEnum">
+    <value>
+      Phone_2_35
+    </value>
+  </const>
+  <const name="Phone_1" type="TPVUEnum">
+    <value>
+      Phone_1
+    </value>
+  </const>
+  <const name="PVU_Off" type="TPVUEnum">
+    <value>
+      PVU_Off
+    </value>
+  </const>
+  <const name="Phone_2" type="TPVUEnum">
+    <value>
+      Phone_2
+    </value>
+  </const>
+  <const name="Two_Channel_Terminal" type="TPhoneFirstEnum">
+    <value>
+      Two_Channel_Terminal
+    </value>
+  </const>
+  <const name="Transit" type="TPhoneFirstEnum">
+    <value>
+      Transit
+    </value>
+  </const>
+  <const name="Terminal" type="TPhoneFirstEnum">
+    <value>
+      Terminal
+    </value>
+  </const>
+  <const name="Channel" type="TCallEnum">
+    <value>
+      Channel
+    </value>
+  </const>
+  <const name="Call_Work" type="TCallEnum">
+    <value>
+      Call_Work
+    </value>
+  </const>
+  <const name="Coupling_Line" type="TCallEnum">
+    <value>
+      Coupling_Line
+    </value>
+  </const>
+  <const name="Disabled" type="TEnabledDisabledEnum">
+    <value>
+      Disabled
+    </value>
+  </const>
+  <const name="Enabled" type="TEnabledDisabledEnum">
+    <value>
+      Enabled
+    </value>
+  </const>
+  <const name="Zero" type="TReceptionBroadcastEnum">
+    <value>
+      Zero
+    </value>
+  </const>
+  <const name="One" type="TReceptionBroadcastEnum">
+    <value>
+      One
+    </value>
+  </const>
+  <const name="Two" type="TReceptionBroadcastEnum">
+    <value>
+      Two
+    </value>
+  </const>
+  <const name="There" type="TReceptionBroadcastEnum">
+    <value>
+      There
+    </value>
+  </const>
+  <const name="Four" type="TReceptionBroadcastEnum">
+    <value>
+      Four
+    </value>
+  </const>
+  <const name="Five" type="TReceptionBroadcastEnum">
+    <value>
+      Five
+    </value>
+  </const>
+  <const name="Six" type="TReceptionBroadcastEnum">
+    <value>
+      Six
+    </value>
+  </const>
+  <const name="Seven" type="TReceptionBroadcastEnum">
+    <value>
+      Seven
+    </value>
+  </const>
+  <const name="Eight" type="TReceptionBroadcastEnum">
+    <value>
+      Eight
+    </value>
+  </const>
+  <const name="Nine" type="TReceptionBroadcastEnum">
+    <value>
+      Nine
+    </value>
+  </const>
+  <const name="Work" type="TControlReceptionBroadcastEnum">
+    <value>
+      Work
+    </value>
+  </const>
+  <const name="Reception" type="TControlReceptionBroadcastEnum">
+    <value>
+      Reception
+    </value>
+  </const>
+  <const name="Broadcast" type="TControlReceptionBroadcastEnum">
+    <value>
+      Broadcast
+    </value>
+  </const>
+  <const name="Indication_0" type="TIndicationEnum">
+    <value>
+      Indication_0
+    </value>
+  </const>
+  <const name="Indication_20" type="TIndicationEnum">
+    <value>
+      Indication_20
+    </value>
+  </const>
+  <const name="Indication_40" type="TIndicationEnum">
+    <value>
+      Indication_40
+    </value>
+  </const>
+  <const name="Indication_60" type="TIndicationEnum">
+    <value>
+      Indication_60
+    </value>
+  </const>
+  <const name="Indication_Broadcast" type="TIndicationEnum">
+    <value>
+      Indication_Broadcast
+    </value>
+  </const>
+  <const name="Indication_Reflection" type="TIndicationEnum">
+    <value>
+      Indication_Reflection
+    </value>
+  </const>
+  <const name="Indication_10" type="TIndicationEnum">
+    <value>
+      Indication_10
+    </value>
+  </const>
+  <const name="Indication_Minus_5" type="TIndicationEnum">
+    <value>
+      Indication_Minus_5
+    </value>
+  </const>
+  <const name="Indication_Minus_20" type="TIndicationEnum">
+    <value>
+      Indication_Minus_20
+    </value>
+  </const>
+  <const name="Indication_Input_Device" type="TIndicationEnum">
+    <value>
+      Indication_Input_Device
+    </value>
+  </const>
+  <const name="Down" type="TDownUpEnum">
+    <value>
+      Down
+    </value>
+  </const>
+  <const name="Up" type="TDownUpEnum">
+    <value>
+      Up
+    </value>
+  </const>
+  <enum name="TWorkType">
+    <element name="None" />
+    <element name="Education" />
+  </enum>
+  <enum name="TControlLevelSwitchEnum">
+    <element name="Phone_1_35" />
+    <element name="Phone_1_20" />
+    <element name="Phone_1_Reception" />
+    <element name="Phone_1_Broadcast" />
+    <element name="Control_Level_Off" />
+    <element name="Phone_2_Broadcast" />
+    <element name="Phone_2_Reception" />
+    <element name="Phone_2_20" />
+    <element name="Phone_2_35" />
+  </enum>
+  <enum name="TPVUEnum">
+    <element name="Phone_1" />
+    <element name="PVU_Off" />
+    <element name="Phone_2" />
+  </enum>
+  <enum name="TPhoneFirstEnum">
+    <element name="Two_Channel_Terminal" />
+    <element name="Transit" />
+    <element name="Terminal" />
+  </enum>
+  <enum name="TCallEnum">
+    <element name="Channel" />
+    <element name="Call_Work" />
+    <element name="Coupling_Line" />
+  </enum>
+  <enum name="TEnabledDisabledEnum">
+    <element name="Disabled" />
+    <element name="Enabled" />
+  </enum>
+  <enum name="TReceptionBroadcastEnum">
+    <element name="Zero" />
+    <element name="One" />
+    <element name="Two" />
+    <element name="There" />
+    <element name="Four" />
+    <element name="Five" />
+    <element name="Six" />
+    <element name="Seven" />
+    <element name="Eight" />
+    <element name="Nine" />
+  </enum>
+  <enum name="TControlReceptionBroadcastEnum">
+    <element name="Work" />
+    <element name="Reception" />
+    <element name="Broadcast" />
+  </enum>
+  <enum name="TIndicationEnum">
+    <element name="Indication_0" />
+    <element name="Indication_20" />
+    <element name="Indication_40" />
+    <element name="Indication_60" />
+    <element name="Indication_Broadcast" />
+    <element name="Indication_Reflection" />
+    <element name="Indication_10" />
+    <element name="Indication_Minus_5" />
+    <element name="Indication_Minus_20" />
+    <element name="Indication_Input_Device" />
+  </enum>
+  <enum name="TDownUpEnum">
+    <element name="Down" />
+    <element name="Up" />
+  </enum>
+  <class name="TStationR415">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+    </ancestor>
+    <members>
+      <field name="FControlLevelSwitch" type="TControlLevelSwitchEnum" visibility="private" />
+      <field name="FPVUSwitch" type="TPVUEnum" visibility="private" />
+      <field name="FPhoneFirstSwitch" type="TPhoneFirstEnum" visibility="private" />
+      <field name="FPhoneSecondSwitch" type="TPhoneFirstEnum" visibility="private" />
+      <field name="FCallFirstSwitch" type="TCallEnum" visibility="private" />
+      <field name="FCallSecondSwitch" type="TCallEnum" visibility="private" />
+      <field name="FEnabledBroadcastFirstSwitch" type="TEnabledDisabledEnum" visibility="private" />
+      <field name="FEnabledBroadcastSecondSwitch" type="TEnabledDisabledEnum" visibility="private" />
+      <field name="FPowerSupplyFirstSwitch" type="TEnabledDisabledEnum" visibility="private" />
+      <field name="FPowerSupplySecondSwitch" type="TEnabledDisabledEnum" visibility="private" />
+      <field name="FReceptionFirstSwitch" type="TReceptionBroadcastEnum" visibility="private" />
+      <field name="FBroadcastFirstSwitch" type="TReceptionBroadcastEnum" visibility="private" />
+      <field name="FReceptionSecondSwitch" type="TReceptionBroadcastEnum" visibility="private" />
+      <field name="FBroadcastSecondSwitch" type="TReceptionBroadcastEnum" visibility="private" />
+      <field name="FReceptionThirdSwitch" type="TReceptionBroadcastEnum" visibility="private" />
+      <field name="FBroadcastThirdSwitch" type="TReceptionBroadcastEnum" visibility="private" />
+      <field name="FDoubleReception" type="TEnabledDisabledEnum" visibility="private" />
+      <field name="FPowerLowNormal" type="TEnabledDisabledEnum" visibility="private" />
+      <field name="FControlReceptionBroadcastSwitch" type="TControlReceptionBroadcastEnum" visibility="private" />
+      <field name="FIndicationSwitch" type="TIndicationEnum" visibility="private" />
+      <field name="FLevel1Switch" type="TIndicationEnum" visibility="private" />
+      <field name="FLevel2Switch" type="TIndicationEnum" visibility="private" />
+      <field name="FDownUpFirstSwitch" type="TDownUpEnum" visibility="private" />
+      <field name="FDownUpSecondSwitch" type="TDownUpEnum" visibility="private" />
+      <field name="FDownUpThirdSwitch" type="TDownUpEnum" visibility="private" />
+      <field name="FDownUpForthSwitch" type="TDownUpEnum" visibility="private" />
+      <field name="FDownUpFifthSwitch" type="TDownUpEnum" visibility="private" />
+      <field name="FDownUp6Switch" type="TDownUpEnum" visibility="private" />
+      <field name="FDownUp7Switch" type="TDownUpEnum" visibility="private" />
+      <field name="FDownUp8Switch" type="TDownUpEnum" visibility="private" />
+      <field name="FDownUp9Switch" type="TDownUpEnum" visibility="private" />
+      <field name="FStateChangeEvent" type="TStateChangeEvent" visibility="private" />
+      <field name="FWorkType" type="TWorkType" visibility="private" />
+      <field name="FPhone" type="TEnabledDisabledEnum" visibility="private" />
+      <field name="FAntena" type="TEnabledDisabledEnum" visibility="private" />
+      <field name="FPRD1" type="Integer" visibility="private" />
+      <field name="FPRD2" type="Integer" visibility="private" />
+      <field name="FPRD3" type="Integer" visibility="private" />
+      <field name="FPRM1" type="Integer" visibility="private" />
+      <field name="FPRM2" type="Integer" visibility="private" />
+      <field name="FPRM3" type="Integer" visibility="private" />
+      <field name="FPhoneButton" type="Boolean" visibility="private" />
+      <field name="FImpulsGenerate" type="Boolean" visibility="private" />
+      <constructor name="Create" visibility="public">
+        <parameters>
+        </parameters>
+      </constructor>
+      <property name="ControlLevelSwitch" visibility="public" read="FControlLevelSwitch" write="FControlLevelSwitch" type="TControlLevelSwitchEnum" />
+      <property name="PVUSwitch" visibility="public" read="FPVUSwitch" write="FPVUSwitch" type="TPVUEnum" />
+      <property name="PhoneFirstSwitch" visibility="public" read="FPhoneFirstSwitch" write="FPhoneFirstSwitch" type="TPhoneFirstEnum" />
+      <property name="PhoneSecondSwitch" visibility="public" read="FPhoneSecondSwitch" write="FPhoneSecondSwitch" type="TPhoneFirstEnum" />
+      <property name="CallFirstSwitch" visibility="public" read="FCallFirstSwitch" write="FCallFirstSwitch" type="TCallEnum" />
+      <property name="CallSecondSwitch" visibility="public" read="FCallSecondSwitch" write="FCallSecondSwitch" type="TCallEnum" />
+      <property name="EnabledBroadcastFirstSwitch" visibility="public" read="FEnabledBroadcastFirstSwitch" write="FEnabledBroadcastFirstSwitch" type="TEnabledDisabledEnum" />
+      <property name="EnabledBroadcastSecondSwitch" visibility="public" read="FEnabledBroadcastSecondSwitch" write="FEnabledBroadcastSecondSwitch" type="TEnabledDisabledEnum" />
+      <property name="PowerSupplyFirstSwitch" visibility="public" read="FPowerSupplyFirstSwitch" write="FPowerSupplyFirstSwitch" type="TEnabledDisabledEnum" />
+      <property name="PowerSupplySecondSwitch" visibility="public" read="FPowerSupplySecondSwitch" write="FPowerSupplySecondSwitch" type="TEnabledDisabledEnum" />
+      <property name="ReceptionFirstSwitch" visibility="public" read="FReceptionFirstSwitch" write="FReceptionFirstSwitch" type="TReceptionBroadcastEnum" />
+      <property name="BroadcastFirstSwitch" visibility="public" read="FBroadcastFirstSwitch" write="FBroadcastFirstSwitch" type="TReceptionBroadcastEnum" />
+      <property name="ReceptionSecondSwitch" visibility="public" read="FReceptionSecondSwitch" write="FReceptionSecondSwitch" type="TReceptionBroadcastEnum" />
+      <property name="BroadcastSecondSwitch" visibility="public" read="FBroadcastSecondSwitch" write="FBroadcastSecondSwitch" type="TReceptionBroadcastEnum" />
+      <property name="ReceptionThirdSwitch" visibility="public" read="FReceptionThirdSwitch" write="FReceptionThirdSwitch" type="TReceptionBroadcastEnum" />
+      <property name="BroadcastThirdSwitch" visibility="public" read="FBroadcastThirdSwitch" write="FBroadcastThirdSwitch" type="TReceptionBroadcastEnum" />
+      <property name="DoubleReception" visibility="public" read="FDoubleReception" write="FDoubleReception" type="TEnabledDisabledEnum" />
+      <property name="PowerLowNormal" visibility="public" read="FPowerLowNormal" write="FPowerLowNormal" type="TEnabledDisabledEnum" />
+      <property name="ControlReceptionBroadcastSwitch" visibility="public" read="FControlReceptionBroadcastSwitch" write="FControlReceptionBroadcastSwitch" type="TControlReceptionBroadcastEnum" />
+      <property name="IndicationSwitch" visibility="public" read="FIndicationSwitch" write="FIndicationSwitch" type="TIndicationEnum" />
+      <property name="DownUpFirstSwitch" visibility="public" read="FDownUpFirstSwitch" write="FDownUpFirstSwitch" type="TDownUpEnum" />
+      <property name="DownUpSecondSwitch" visibility="public" read="FDownUpSecondSwitch" write="FDownUpSecondSwitch" type="TDownUpEnum" />
+      <property name="DownUpThirdSwitch" visibility="public" read="FDownUpThirdSwitch" write="FDownUpThirdSwitch" type="TDownUpEnum" />
+      <property name="DownUpForthSwitch" visibility="public" read="FDownUpForthSwitch" write="FDownUpForthSwitch" type="TDownUpEnum" />
+      <property name="DownUpFifthSwitch" visibility="public" read="FDownUpFifthSwitch" write="FDownUpFifthSwitch" type="TDownUpEnum" />
+      <property name="DownUp6Switch" visibility="public" read="FDownUp6Switch" write="FDownUp6Switch" type="TDownUpEnum" />
+      <property name="DownUp7Switch" visibility="public" read="FDownUp7Switch" write="FDownUp7Switch" type="TDownUpEnum" />
+      <property name="DownUp8Switch" visibility="public" read="FDownUp8Switch" write="FDownUp8Switch" type="TDownUpEnum" />
+      <property name="DownUp9Switch" visibility="public" read="FDownUp9Switch" write="FDownUp9Switch" type="TDownUpEnum" />
+      <event name="StateChangeEvent" visibility="public" read="FStateChangeEvent" write="FStateChangeEvent" type="TStateChangeEvent" />
+      <property name="WorkType" visibility="public" read="FWorkType" write="FWorkType" type="TWorkType" />
+      <property name="Phone" visibility="public" read="FPhone" write="FPhone" type="TEnabledDisabledEnum" />
+      <property name="Antena" visibility="public" read="FAntena" write="FAntena" type="TEnabledDisabledEnum" />
+      <property name="PRD1" visibility="public" read="FPRD1" write="FPRD1" type="Integer" />
+      <property name="PRD2" visibility="public" read="FPRD2" write="FPRD2" type="Integer" />
+      <property name="PRD3" visibility="public" read="FPRD3" write="FPRD3" type="Integer" />
+      <property name="PRM1" visibility="public" read="FPRM1" write="FPRM1" type="Integer" />
+      <property name="PRM2" visibility="public" read="FPRM2" write="FPRM2" type="Integer" />
+      <property name="PRM3" visibility="public" read="FPRM3" write="FPRM3" type="Integer" />
+      <property name="PhoneButton" visibility="public" read="FPhoneButton" write="FPhoneButton" type="Boolean" />
+      <property name="ImpulsGenerate" visibility="public" read="FImpulsGenerate" write="FImpulsGenerate" type="Boolean" />
+      <property name="Level1Switch" visibility="public" read="FLevel1Switch" write="FLevel1Switch" type="TIndicationEnum" />
+      <property name="Level2Switch" visibility="public" read="FLevel2Switch" write="FLevel2Switch" type="TIndicationEnum" />
+      <procedure name="DoChangeControlLelevSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Контроль уровня ДБ&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoChangePVUSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;ПВУ&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoPhoneFirstSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;1 ТЛФ на блоке Б17-1&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoPhoneSecondSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;1 ТЛФ на блоке ББ17-1&quot;(2).
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoCallFirstSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Вызов&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoCallSecondSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Вызов&quot;(1).
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoEnabledBroadcastFirstSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Вкл. Пер.&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoEnabledBroadcastSecondSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Вкл. Пер.&quot;(1).
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoPowerSupplyFirstSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Сеть ~220В Вкл.&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoPowerSupplySecondSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Сеть +27В Вкл.&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoReceptionFirstSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Настройка Прием 1&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBroadcastFirstSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Настройка Передача 1&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoReceptionSecondSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Настройка Прием 2&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBroadcastSecondSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Настройка Передача 2&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoReceptionThirdSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Настройка Прием 3&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBroadcastThirdSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Настройка Передача 3&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDoubleReception" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Дупл./Деж. Прием&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoPowerLowNormal" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Мощн. Пониж./Норм.&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoControlReceptionBroadcastSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Работа/Прм./Прд.&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoIndicationSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Индикация&quot;.
+           </summary>
+           <param name="State">Состояние объекта (переключателя).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDownUpFirstSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;ИГ.&quot;.
+           </summary>
+           <param name="State">Состояние объекта (ИГ.).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDownUpSecondSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Опер.&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Опер.).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDownUpThirdSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Сл.&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Сл.).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDownUpForthSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Тлг1.тчк&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Тлг1.тчк).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDownUpFifthSwitch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Тлг1.контр&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Тлг1.контр).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDownUp6Switch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Тлг2.тчк&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Тлг2.тчк).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDownUp7Switch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Тлг2.контр&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Тлг2.контр).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDownUp8Switch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Настройка&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Настройка).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDownUp9Switch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния переключателя &quot;Настройка&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Настройка).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoChangeWorkType" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения типа работы станции(Просто потыкать, тренировка...).
+           </summary>
+           <param name="State">Состояние объекта (Тип работы станции).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoChangePhone" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик гнезда телефонной трубки.
+           </summary>
+           <param name="State">Состояние объекта (гнездо телефонной трубки).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="StateToDefaultPeriphery" visibility="public">
+      </procedure>
+      <procedure name="DoLevel1Switch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния уровня &quot;Уровень ТЛФ1&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Уровень ТЛФ1).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoLevel2Switch" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик изменения состояния уровня &quot;Уровень ТЛФ2&quot;.
+           </summary>
+           <param name="State">Состояние объекта (Уровень ТЛФ2).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+      <procedure name="DoChangeAntena" visibility="public">
+        <devnotes>
+           <summary>
+           Обработчик гнезда антенны
+           </summary>
+           <param name="State">Состояние объекта (гнездо антенны).</param>
+        </devnotes>
+        <parameters>
+          <parameter name="State" type="Integer" />
+        </parameters>
+      </procedure>
+    </members>
+  </class>
+</namespace>
